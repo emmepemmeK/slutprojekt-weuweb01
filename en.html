@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghibli Movies</title>
+    <link rel="stylesheet" href="en-sv.css">
 </head>
 
 <body>
     <header>
         <h1>Studio Ghibli</h1>
+
+        <nav>
+            <button id="darkBtn" onclick="darkFunction()">◐</button>
+
+            <a href="#ponyo">Ponyo</a>
+            <a href="#totoro">My neighbor Totoro</a>
+            <a href="#s-away">Spirited Away</a>
+            <a href="#fireflies">Grave of the Fireflies</a>
+            <hr>
+            <a href="sv.html">Swedish</a>
+        </nav>
     </header>
 
     <main>
@@ -22,42 +34,82 @@
                 Feature.</p>
         </section>
         <section class="movies">
-            <article class="ponyo">
+            <h2>Movies</h2>
+            <article class="ponyo" id="ponyo">
                 <img src="ponyo.webp" alt="Ponyo from the movie 'Ponyo">
-                <p><i>Ponyo</i> is a movie about a son of a sailor, a 5-year old boy named Sosuke. He lives his life
-                    quite by the oceanside with his mother mostly. One day, Sosuke finds an adorable goldfish stuck in a
+                <p><i>Ponyo</i> is a movie about a son of a sailor; a 5-year old boy named Sosuke. He lives his life
+                    quite by the oceanside, mostly with his mother. One day, Sosuke finds an adorable goldfish stuck in
+                    a
                     glass bottle. He breaks the bottle to break out the fish but then the ocean behaves differently. The
                     goldfish is Ponyo, daughter of a masterful wizard and a sea goddess. Ponyo uses her fathers magic to
                     transform herself into a human. She quickly falls in love with Sosuke and life on land, and so does
                     Sosuke. In this movie you will follow Ponyo, Sosuke and all the magic that can turn a village upside
                     down. Watching <i>Ponyo</i> is an emotional rollercoaster. Happiness, sadness, fear, empathy. Though
-                    it is still a great movie for families, cozy weekends or partners. </p>
+                    it is still a great movie for families, cozy weekends or partners. Ponyo was released in 2009 </p>
             </article>
 
-            <article class="totoro">
-                <p></p>
+            <article class="totoro" id="totoro">
+                <p>Two excited sisters, Satsuki and Mei, just moved with their father to a new house in the countryside
+                    of 1950s Japan so they could reunite with their unwell mother. The sisters now have all the time in
+                    the world for adventures and to explore their new home by the dense forest filled with mythical
+                    creatures. One morning Satsuki stumbles upon Totoro, a fluffy, enormous mythical creature with large
+                    eyes. <i>My neighbor Totoro </i>, 1988, is a cozy movie where you get to follow Satsuki and Mei on
+                    their
+                    adventures, exploring the new area and mysterious creatures. This movie is more suitable for
+                    children since it is an easy plot to understand and get along with.</p>
                 <img src="totoro.png" alt="Totoro from the movie 'My neighbor Totoro'">
             </article>
 
-            <article class="spirited-away">
+            <article class="spirited-away" id="s-away">
                 <img src="ghoste-face.webp" alt="Ghost Face from the movie 'Spirited Away">
-                <p></p>
+                <p><i>Spirited Away</i>, released in 2001, is about Chihiro and her family. During a long car ride they
+                    stop to
+                    find an interesting tunnel. Though they didn’t know the disturbing world behind it. When her parents
+                    undergo a mysterious transformation, Chihiro gets stuck in that world and has to protect herself
+                    from the
+                    strange spirits who seek to keep her there. <i>Spirited Away</i> is an enthralling movie that is
+                    hard to
+                    resist, always something new happening with an amazing plot. It is believed that this story is based
+                    on a real-life incident that Hayao Miyazaki experienced once. </p>
             </article>
 
-            <article class="fireflies">
-                <p></p>
+            <article class="fireflies" id="fireflies">
+                <p>During the last descending days of World War ||, the siblings Seita and Setsuko separated from their
+                    parents due to American firebombing. Now they have to survive by themselves. On their journey, they
+                    look for a safe place to live in. Seita and Setsuko must rely on one another to survive. When food
+                    and medicine start to run out, Seita must help his sister so she can survive. <i>Grave of the
+                        Fireflies</i>
+                    was released in 1988 and it is an awfully sad movie. It is difficult to finish watching the movie
+                    without tears falling. Still, it shows a clear input on how people actually had to live for
+                    survival. </p>
                 <img src="grave-of-fireflies.png" alt="Grave of the fireflies">
             </article>
         </section>
 
         <section class="trailers">
-
+            <p><i>Official trailer for My neighbor Totoro</i></p>
+            <video controls>
+                <source src="totoro-trailer.mp4" type="video/mp4">
+            </video>
         </section>
     </main>
     <footer>
         <p>Emme AW24</p>
         <a href="https://github.com/emmepemmeK"><i>emmepemmeK</i></a>
     </footer>
+    <script>
+        function darkFunction() {
+            let element = document.body;
+            element.classList.toggle("dark-mode");
+
+            const btn = document.getElementById("darkBtn");
+            if (btn.textContent === "◐") {
+                btn.textContent = "◑";
+            } else {
+                btn.textContent = "◐";
+            }
+        }
+    </script>
 </body>
 
 </html>

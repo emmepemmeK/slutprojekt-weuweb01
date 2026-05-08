@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Movies</title>
+    <link rel="stylesheet" href="en-sv.css">
+</head>
+
+<body>
+    <header>
+        <h1>Studio Ghibli</h1>
+
+        <nav>
+            <button id="darkBtn" onclick="darkFunction()">◐</button>
+
+            <a href="#ponyo">Ponyo</a>
+            <a href="#totoro">My neighbor Totoro</a>
+            <a href="#s-away">Spirited Away</a>
+            <a href="#fireflies">Grave of the Fireflies</a>
+            <hr>
+            <a href="en.html">Engelska</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ghibli">
+            <p>Studio Ghibli är en animationsstudio belägen i Japan. Den grundades 1985 av Hayao Miyazaki och Isao
+                Takahata. Studio Ghibli är mest känd för sin film <i>My neighbor Totoro</i>. De animerar allting
+                för hand, vilket är anmärkningsvärt eftersom filmerna ändå håller så hög kvalitet. Deras filmer
+                präglas av noggrann detaljrikedom och berättelserna är uppbyggda på ett innovativt, fascinerande
+                och känslomässigt gripande sätt. Studio Ghibli har vunnit flera priser för sitt arbete, bland annat
+                en Oscar för bästa animerade långfilm.</p>
+        </section>
+        <section class="movies">
+            <h2>Filmer</h2>
+            <article class="ponyo" id="ponyo">
+                <img src="ponyo.webp" alt="Ponyo from the movie 'Ponyo">
+                <p><i>Ponyo</i> är en film om en sjömans son; en 5-årig pojke vid namn Sosuke. Han lever sitt liv
+                    nära havet, mestadels tillsammans med sin mamma. En dag hittar Sosuke en söt guldfisk som fastnat i en
+                    glasflaska. Han krossar flaskan för att befria fisken, men då börjar havet bete sig annorlunda.
+                    Guldfisken är Ponyo, dotter till en mäktig trollkarl och en havsgudinna. Ponyo använder sin fars
+                    magi för att förvandla sig till en människa. Hon förälskar sig snabbt i Sosuke och livet på land,
+                    och Sosuke i henne. I den här filmen får du följa Ponyo, Sosuke och all den magi som kan vända en
+                    hel by upp och ned. Att se <i>Ponyo</i> är en emotionell berg-och-dalbana. Glädje, sorg, rädsla,
+                    empati. Det är ändå en fantastisk film för hela familjen, mysiga helger eller par. Ponyo hade
+                    premiär 2009.</p>
+            </article>
+
+            <article class="totoro" id="totoro">
+                <p>Två exalterade systrar, Satsuki och Mei, har precis flyttat med sin far till ett nytt hus på
+                    landsbygden i 1950-talets Japan för att återförenas med sin sjuka mor. Systrarna har nu all
+                    tid i världen för äventyr och att utforska sitt nya hem vid den täta skogen fylld med mytiska
+                    varelser. En morgon stöter Satsuki på Totoro, en lurvig, enorm mytisk varelse med stora ögon.
+                    <i>My neighbor Totoro</i>, 1988, är en mysig film där du får följa Satsuki och Mei på deras
+                    äventyr, när de utforskar det nya området och mystiska varelser. Den här filmen lämpar sig
+                    bättre för barn eftersom handlingen är enkel att förstå och följa med i.</p>
+                <img src="totoro.png" alt="Totoro from the movie 'My neighbor Totoro'">
+            </article>
+
+            <article class="spirited-away" id="s-away">
+                <img src="ghoste-face.webp" alt="Ghost Face from the movie 'Spirited Away">
+                <p><i>Spirited Away</i>, som släpptes 2001, handlar om Chihiro och hennes familj. Under en lång bilresa
+                    stannar de för att utforska en spännande tunnel. Men de visste inte vilket störande världen som
+                    väntade bakom den. När hennes föräldrar genomgår en mystisk förvandling fastnar Chihiro i den
+                    världen och måste skydda sig från de konstiga andarna som vill hålla henne kvar där.
+                    <i>Spirited Away</i> är en fängslande film som är svår att motstå, med ständigt nya händelser
+                    och en fantastisk handling. Det tros att den här historien är baserad på en verklig händelse som
+                    Hayao Miyazaki en gång upplevde.</p>
+            </article>
+
+            <article class="fireflies" id="fireflies">
+                <p>Under de sista nedgående dagarna av andra världskriget separerades syskonen Seita och Setsuko från
+                    sina föräldrar på grund av amerikanska brandbombningar. Nu måste de klara sig på egen hand. Under
+                    sin resa letar de efter ett säkert ställe att bo på. Seita och Setsuko måste förlita sig på
+                    varandra för att överleva. När mat och medicin börjar ta slut måste Seita hjälpa sin syster så
+                    att hon kan överleva. <i>Grave of the Fireflies</i> släpptes 1988 och det är en oerhört sorglig
+                    film. Det är svårt att se klart på filmen utan att tårarna rinner. Ändå ger den en tydlig
+                    inblick i hur människor faktiskt var tvungna att leva för att överleva.</p>
+                <img src="grave-of-fireflies.png" alt="Grave of the fireflies">
+            </article>
+        </section>
+
+        <section class="trailers">
+            <p><i>Officiel trailer för filmen My neighbor Totoro</i></p>
+            <video controls>
+                <source src="totoro-trailer.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>Emme AW24</p>
+        <a href="https://github.com/emmepemmeK"><i>emmepemmeK</i></a>
+    </footer>
+    <script>
+        function darkFunction() {
+            let element = document.body;
+            element.classList.toggle("dark-mode");
+
+            const btn = document.getElementById("darkBtn");
+            if (btn.textContent === "◐") {
+                btn.textContent = "◑";
+            } else {
+                btn.textContent = "◐";
+            }
+        }
+    </script>
+</body>
+</html>

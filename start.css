@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: 0.5s;
 }
 .swedish {
     display: flex;
@@ -43,10 +44,18 @@ body {
 .english > a:nth-child(1) {
     width: 50%;
     padding: 2rem 0;
+    transition: 0.5s;
+}
+.english > a:nth-child(1):hover {
+    width: 52%;
 }
 .swedish > a:nth-child(1){
     width: 50%;
     padding: 2rem 0;
+    transition: 0.5s;
+}
+.swedish > a:nth-child(1):hover {
+    width: 52%;
 }
 a {
     text-align: center;

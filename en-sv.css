@@ -1,0 +1,129 @@
+:root{
+    --header-footer: rgb(148, 176, 235);
+    --body-: rgb(225, 233, 245);
+    --main-: rgb(168, 190, 255);
+    --text-: rgba(35, 63, 110, 0.478);
+
+    --header-footer-dark-: rgb(7, 35, 82);
+    --body-dark-: rgb(60, 82, 177);
+    --main-dark-: rgb(28, 53, 92);
+    --text-dark-: rgba(148, 176, 235, 0.56);
+
+    --header-font: Copperplate, Georgia, serif;
+    --text-font: Helvetica;
+}
+html{scroll-behavior: smooth;}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.dark-mode {
+    color: white;
+    background-color: var(--body-dark-);
+}
+body.dark-mode header{
+    background-color: var(--header-footer-dark-);
+}
+body.dark-mode main{
+    background-color: var(--main-dark-);
+    border: 2px solid var(--header-footer);
+}
+body.dark-mode a{
+    color: rgb(153, 210, 245);
+}
+body.dark-mode h2{
+    text-shadow: 2px 2px 8px black;
+}
+body.dark-mode article > p{
+    background-color: var(--text-dark-);
+}
+
+
+a{
+    color: rgb(3, 3, 71);
+    transition: 50ms;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+a:hover{
+    transform: scale(1.1);
+    color: rgb(15, 15, 126);
+}
+img {
+    width: 40%;
+}
+p {
+    font-family: var(--text-font);
+    font-size: 1.2rem;
+    margin: 0 2%;
+}
+button {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+}
+body {
+    background-color: var(--body-);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--header-footer);
+    height: 10%;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;    
+}
+h1 {
+    font-family: var(--header-font); 
+    text-align: center;
+}
+h2 {
+    font-family: var(--header-font);
+    align-self: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px white;
+}
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+main {
+    background-color: var(--main-);
+    margin: 3% 10%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--header-footer-dark-);
+}
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0;
+}
+article > p{
+    width: 55%;
+    background-color: var(--text-);
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.ghibli >p{
+    margin-bottom: 5%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5em;
+}
+.movies {
+    display: flex;
+    flex-direction: column;
+}
