@@ -12,6 +12,10 @@
     --header-font: Copperplate, Georgia, serif;
     --text-font: Helvetica;
 }
+::selection{
+    background-color: white;
+    color: black;
+}
 html{scroll-behavior: smooth;}
 *{
     margin: 0;
@@ -35,14 +39,14 @@ body.dark-mode a{
 body.dark-mode h2{
     text-shadow: 2px 2px 8px black;
 }
-body.dark-mode article > p{
-    background-color: var(--text-dark-);
+body.dark-mode footer {
+    background-color: var(--header-footer-dark-);
 }
 
 
 a{
     color: rgb(3, 3, 71);
-    transition: 50ms;
+    transition: 0.5s;
     letter-spacing: 1px;
     text-decoration: none;
 }
@@ -111,9 +115,10 @@ article {
 }
 article > p{
     width: 55%;
-    background-color: var(--text-);
     padding: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
+    border-radius: 2rem;
+    border: 2px solid white;
 }
 
 .ghibli >p{
@@ -122,8 +127,34 @@ article > p{
     align-self: center;
     justify-self: center;
     font-size: 1.5em;
+    line-height: 1.8rem;
 }
 .movies {
     display: flex;
     flex-direction: column;
+}
+
+
+.trailers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.trailers > h2 {
+    font-size: large;
+    margin: 5% 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-footer);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.hamburger-btn {
+    display: none;
 }

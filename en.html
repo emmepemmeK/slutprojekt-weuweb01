@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghibli Movies</title>
     <link rel="stylesheet" href="en-sv.css">
+    <link rel="stylesheet" href="en-sv-ress.css">
+    <link rel="icon" type="image/x-icon" href="icons8-totoro-48.png">
 </head>
 
 <body>
     <header>
         <h1>Studio Ghibli</h1>
-
+        <button id="darkBtn" onclick="darkFunction()">◐</button>
+        <button class="hamburger-btn" aria-label="Menu" onclick="toggleNav()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav>
-            <button id="darkBtn" onclick="darkFunction()">◐</button>
-
             <a href="#ponyo">Ponyo</a>
             <a href="#totoro">My neighbor Totoro</a>
             <a href="#s-away">Spirited Away</a>
@@ -87,7 +92,7 @@
         </section>
 
         <section class="trailers">
-            <p><i>Official trailer for My neighbor Totoro</i></p>
+            <h2><i>Official trailer for My neighbor Totoro</i></h2>
             <video controls>
                 <source src="totoro-trailer.mp4" type="video/mp4">
             </video>
@@ -108,6 +113,12 @@
             } else {
                 btn.textContent = "◐";
             }
+        }
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            const btn = document.querySelector('.hamburger-btn');
+            nav.classList.toggle('nav-open');
+            btn.classList.toggle('is-active');
         }
     </script>
 </body>

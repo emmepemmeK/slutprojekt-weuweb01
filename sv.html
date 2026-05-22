@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghibli Movies</title>
+    <title>Ghibli Filmer</title>
     <link rel="stylesheet" href="en-sv.css">
+    <link rel="stylesheet" href="en-sv-ress.css">
+    <link rel="icon" type="image/x-icon" href="icons8-totoro-48.png">
 </head>
 
 <body>
     <header>
         <h1>Studio Ghibli</h1>
-
+        <button id="darkBtn" onclick="darkFunction()">◐</button>
+        <button class="hamburger-btn" aria-label="Menu"
+            onclick="toggleNav()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav>
-            <button id="darkBtn" onclick="darkFunction()">◐</button>
-
             <a href="#ponyo">Ponyo</a>
             <a href="#totoro">My neighbor Totoro</a>
             <a href="#s-away">Spirited Away</a>
@@ -38,7 +44,8 @@
             <article class="ponyo" id="ponyo">
                 <img src="ponyo.webp" alt="Ponyo from the movie 'Ponyo">
                 <p><i>Ponyo</i> är en film om en sjömans son; en 5-årig pojke vid namn Sosuke. Han lever sitt liv
-                    nära havet, mestadels tillsammans med sin mamma. En dag hittar Sosuke en söt guldfisk som fastnat i en
+                    nära havet, mestadels tillsammans med sin mamma. En dag hittar Sosuke en söt guldfisk som fastnat i
+                    en
                     glasflaska. Han krossar flaskan för att befria fisken, men då börjar havet bete sig annorlunda.
                     Guldfisken är Ponyo, dotter till en mäktig trollkarl och en havsgudinna. Ponyo använder sin fars
                     magi för att förvandla sig till en människa. Hon förälskar sig snabbt i Sosuke och livet på land,
@@ -55,7 +62,8 @@
                     varelser. En morgon stöter Satsuki på Totoro, en lurvig, enorm mytisk varelse med stora ögon.
                     <i>My neighbor Totoro</i>, 1988, är en mysig film där du får följa Satsuki och Mei på deras
                     äventyr, när de utforskar det nya området och mystiska varelser. Den här filmen lämpar sig
-                    bättre för barn eftersom handlingen är enkel att förstå och följa med i.</p>
+                    bättre för barn eftersom handlingen är enkel att förstå och följa med i.
+                </p>
                 <img src="totoro.png" alt="Totoro from the movie 'My neighbor Totoro'">
             </article>
 
@@ -67,7 +75,8 @@
                     världen och måste skydda sig från de konstiga andarna som vill hålla henne kvar där.
                     <i>Spirited Away</i> är en fängslande film som är svår att motstå, med ständigt nya händelser
                     och en fantastisk handling. Det tros att den här historien är baserad på en verklig händelse som
-                    Hayao Miyazaki en gång upplevde.</p>
+                    Hayao Miyazaki en gång upplevde.
+                </p>
             </article>
 
             <article class="fireflies" id="fireflies">
@@ -105,6 +114,13 @@
                 btn.textContent = "◐";
             }
         }
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            const btn = document.querySelector('.hamburger-btn');
+            nav.classList.toggle('nav-open');
+            btn.classList.toggle('is-active');
+        }
     </script>
 </body>
+
 </html>
